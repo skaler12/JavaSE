@@ -8,5 +8,6 @@ public class Starter {
         Company company = new Company();
         System.out.println(company.toString());
 
+        company.getCompanyId();
     }
 }
