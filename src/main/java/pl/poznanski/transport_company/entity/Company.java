@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 
 @NoArgsConstructor
@@ -18,11 +19,16 @@ import java.util.List;
 
     private Date foundatonData;
 
-    private List<Driver>driverList;
+    private List<Driver>driverList = new LinkedList<>();
 
     public Company(String companyName, Date foundatonData, List<Driver> driverList) {
         this.companyName = companyName;
         this.foundatonData = foundatonData;
         this.driverList = driverList;
+    }
+    public List<Driver>addDriverList (Company company, Driver driver){
+        company.getDriverList().add(driver);
+        driver.setDriverCompanyName(company.getCompanyName());
+        return company.getDriverList();
     }
 }

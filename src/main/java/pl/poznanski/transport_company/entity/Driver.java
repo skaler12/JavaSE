@@ -19,6 +19,8 @@ import java.util.List;
 
     private int age;
 
+    private String driverCompanyName;
+
     public Driver(){
     }
 
@@ -26,4 +28,5 @@ import java.util.List;
         this.name=name;
         this.age=age;
     };
+
 }
