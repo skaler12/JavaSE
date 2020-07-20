@@ -1,33 +1,28 @@
 package pl.poznanski.transport_company.entity;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
+import java.util.List;
 
-@EqualsAndHashCode
-@Getter
-@Setter
-@ToString
- public class Company {
+@NoArgsConstructor
+ public @Data class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int companyId;
 
     private String companyName;
 
-    private Date data;
+    private Date foundatonData;
 
-    public Company(){
+    private List<Driver>driverList;
 
-    };
-    public Company(String companyName, Date data) {
+    public Company(String companyName, Date foundatonData, List<Driver> driverList) {
         this.companyName = companyName;
-        this.data = data;
-    };
+        this.foundatonData = foundatonData;
+        this.driverList = driverList;
+    }
 }
