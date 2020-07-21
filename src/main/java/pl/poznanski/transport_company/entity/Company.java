@@ -9,6 +9,9 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * annotation with lombok library - avoidance boiler code :)
+ */
 @NoArgsConstructor
  public @Data class Company {
     @Id
@@ -26,6 +29,13 @@ import java.util.List;
         this.foundatonData = foundatonData;
         this.driverList = driverList;
     }
+
+    /**
+     *Method which add new driver to driverlist in select company
+     * @param company
+     * @param driver
+     * @return driverList concering company with param numer 1
+     */
     public List<Driver>addDriverList (Company company, Driver driver){
         company.getDriverList().add(driver);
         driver.setDriverCompanyName(company.getCompanyName());

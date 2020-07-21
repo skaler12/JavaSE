@@ -34,5 +34,8 @@ public class Starter {
         }
         System.out.println(driver1.getDriverCompanyName());
         System.out.println(driver2.getDriverCompanyName());
+
+        System.out.println();
+
     }
 }
