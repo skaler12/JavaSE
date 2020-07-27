@@ -21,6 +21,8 @@ import java.util.List;
 
     private String driverCompanyName;
 
+    private Vehicle vehicle;
+
     public Driver(){
     }
 
@@ -28,5 +30,8 @@ import java.util.List;
         this.name=name;
         this.age=age;
     };
+    public void addVehicle(Driver driver, Vehicle vehicle){
+      driver.setVehicle(vehicle);
+    }
 
 }

@@ -11,7 +11,7 @@ import pl.poznanski.transport_company.dto.VehicleSetup;
 import java.io.IOException;
 
 @NoArgsConstructor
-public @Data class Vehicle implements VehicleSetup {
+public @Data class Vehicle extends Driver implements VehicleSetup {
 
     private int vehicleId;
 

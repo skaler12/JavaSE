@@ -1,8 +1,10 @@
 package pl.poznanski.transport_company;
 
 
+import pl.poznanski.transport_company.dto.OrderType;
 import pl.poznanski.transport_company.entity.Company;
 import pl.poznanski.transport_company.entity.Driver;
+import pl.poznanski.transport_company.entity.Order;
 import pl.poznanski.transport_company.entity.Vehicle;
 
 import java.io.IOException;
@@ -45,6 +47,11 @@ public class Starter {
         System.out.println(vehicle.getFuelLevel());
         System.out.println(vehicle.getVehicleData(vehicle));
         vehicle.ifEngineRun(vehicle);
+        driver.addVehicle(driver,vehicle);
 
+        Order order =new Order(4,43);
+        order.setOrigin(OrderType.FOREIGN);
+        System.out.println(order.toString());
+        // mockito andotacje wyjatki polimorfizm
     }
 }
