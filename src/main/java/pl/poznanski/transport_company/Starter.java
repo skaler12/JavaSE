@@ -3,12 +3,14 @@ package pl.poznanski.transport_company;
 
 import pl.poznanski.transport_company.entity.Company;
 import pl.poznanski.transport_company.entity.Driver;
+import pl.poznanski.transport_company.entity.Vehicle;
 
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Starter {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Company company = new Company();
         Driver driver = new Driver();
         driver.setAge(22);
@@ -36,6 +38,13 @@ public class Starter {
         System.out.println(driver2.getDriverCompanyName());
 
         System.out.println();
+        System.out.println();
+        Vehicle  vehicle = new Vehicle("Ford",70,2100f,false);
+        System.out.println(vehicle.toString());
+        System.out.println();
+        System.out.println(vehicle.getFuelLevel());
+        System.out.println(vehicle.getVehicleData(vehicle));
+        vehicle.ifEngineRun(vehicle);
 
     }
 }
