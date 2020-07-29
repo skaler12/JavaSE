@@ -53,5 +53,6 @@ public class Starter {
         order.setOrigin(OrderType.FOREIGN);
         System.out.println(order.toString());
         // mockito andotacje wyjatki polimorfizm
+        System.out.println();
     }
 }
