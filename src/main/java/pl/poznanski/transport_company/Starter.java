@@ -52,7 +52,7 @@ public class Starter {
         Order order =new Order(4,43);
         order.setOrigin(OrderType.FOREIGN);
         System.out.println(order.toString());
-        // mockito andotacje wyjatki polimorfizm
+        // mockito adnotacje wyjatki polimorfizm
         System.out.println();
     }
 }
