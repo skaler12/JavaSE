@@ -34,4 +34,23 @@ import java.util.List;
       driver.setVehicle(vehicle);
     }
 
+    public int checkDriverAge(Driver driver) throws ArithmeticException{
+      if(driver.getAge()<18||driver.getAge()>65){
+        throw new ArithmeticException ("Driver has not enought years old or is too older");
+      }
+      return driver.getAge();
+    }
+
+    public void checkDriverQuality(Driver driver){
+      try {
+        driver.checkDriverAge(driver);
+      }
+      catch (ArithmeticException ex){
+        System.out.println("Check driver age!");
+        System.out.println(ex.getCause());
+      }
+      finally {
+        System.out.println("Driver Age" + driver.getAge());
+      }
+    }
 }

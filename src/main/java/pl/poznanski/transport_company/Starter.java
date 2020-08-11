@@ -73,8 +73,13 @@ public class Starter {
         System.out.println("/////////////////////////////");//jakby był spring to tutaj by dal autowired i tyle 
         System.out.println(orderAddVehicle.getMapOrder());
         System.out.println("********");
-        vehicle.setFuelLevel(-2.0);
+        vehicle.setFuelLevel(2.0);
         System.out.println(vehicle.carStatus(vehicle));
-
+        System.out.println("-----------------------------");
+        driver.setAge(63);
+        driver.checkDriverAge(driver);
+        System.out.println("-----------------------------");
+        driver.setAge(45);
+        driver.checkDriverQuality(driver);
     }
 }
