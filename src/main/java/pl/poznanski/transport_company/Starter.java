@@ -72,6 +72,9 @@ public class Starter {
         orderAddVehicle.addVehicleToOrder(vehicle,order);
         System.out.println("/////////////////////////////");//jakby był spring to tutaj by dal autowired i tyle 
         System.out.println(orderAddVehicle.getMapOrder());
+        System.out.println("********");
+        vehicle.setFuelLevel(-2.0);
+        System.out.println(vehicle.carStatus(vehicle));
 
     }
 }

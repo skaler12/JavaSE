@@ -50,6 +50,14 @@ public @Data class Vehicle extends Driver implements VehicleSetup {
         return "Silnik został wyłączony";
     }
 
+    public double carStatus(Vehicle vehicle){
+
+            if(vehicle.getFuelLevel()<0){
+                throw new ArithmeticException("Fuel level have not be under 0");
+            }
+            return vehicle.getFuelLevel();
+    }
+
     @Override
     public boolean ifEngineRun(Vehicle vehicle) {
         if(vehicle.engineStatus==true){
