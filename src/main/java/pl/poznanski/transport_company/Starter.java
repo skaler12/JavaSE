@@ -81,6 +81,5 @@ public class Starter {
         System.out.println("-----------------------------");
         driver.setAge(45);
         driver.checkDriverQuality(driver);
-        System.out.println();
     }
 }

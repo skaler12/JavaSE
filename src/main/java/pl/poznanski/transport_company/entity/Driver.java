@@ -30,10 +30,12 @@ import java.util.List;
         this.name=name;
         this.age=age;
     };
+    //Test
     public void addVehicle(Driver driver, Vehicle vehicle){
       driver.setVehicle(vehicle);
     }
 
+    //test
     public int checkDriverAge(Driver driver) throws ArithmeticException{
       if(driver.getAge()<18||driver.getAge()>65){
         throw new ArithmeticException ("Driver has not enought years old or is too older");
@@ -41,6 +43,7 @@ import java.util.List;
       return driver.getAge();
     }
 
+    //test
     public void checkDriverQuality(Driver driver){
       try {
         driver.checkDriverAge(driver);

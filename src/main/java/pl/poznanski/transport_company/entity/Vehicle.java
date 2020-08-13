@@ -35,7 +35,7 @@ public @Data class Vehicle extends Driver implements VehicleSetup {
     public double getFuelLevel(double fuelLevel){
         return fuelLevel;
     }
-
+    //test
     @Override
     public void startEngine(Vehicle vehicle) throws IOException {
         if(vehicle.getFuelLevel()>1){
@@ -45,11 +45,13 @@ public @Data class Vehicle extends Driver implements VehicleSetup {
         else throw new IOException ("Za mało paliwa by uruchomic silnik");
     }
 
+    //test
     @Override
     public String stopEngine(Vehicle vehicle) {
         return "Silnik został wyłączony";
     }
 
+    //test
     public double carStatus(Vehicle vehicle){
 
             if(vehicle.getFuelLevel()<0){
@@ -57,7 +59,7 @@ public @Data class Vehicle extends Driver implements VehicleSetup {
             }
             return vehicle.getFuelLevel();
     }
-
+    //test
     @Override
     public boolean ifEngineRun(Vehicle vehicle) {
         if(vehicle.engineStatus==true){

@@ -36,6 +36,7 @@ import java.util.List;
      * @param driver
      * @return driverList concering company with param numer 1
      */
+    //Dodawanie użytkownika czyli musi byc test
     public List<Driver>addDriverList (Company company, Driver driver){
         company.getDriverList().add(driver);
         driver.setDriverCompanyName(company.getCompanyName());
