@@ -1,6 +1,6 @@
 package pl.poznanski.transport_company.genericType;
 
-public class MaleClient <T>{
+public class MaleClient <T,C>{
 
     private T age;
 
@@ -14,4 +14,7 @@ public class MaleClient <T>{
     public T getAge(){
             return age;
             }
+    public C get(C something){
+        return something;
+    }
 }

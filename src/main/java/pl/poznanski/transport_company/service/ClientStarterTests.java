@@ -22,6 +22,11 @@ public class ClientStarterTests {
 
         Client<Object>objectClient = new Client<>(new Object());
         System.out.println(objectClient.getClientName());
+
+        //dodanie nowego parametru typu Integer i wywoalenie z nim metody get.
+        MaleClient<MaleClient,Integer>maleClient1 = new MaleClient<>(new MaleClient());
+        System.out.println(maleClient1.get(12));
+
     }
 }
 
