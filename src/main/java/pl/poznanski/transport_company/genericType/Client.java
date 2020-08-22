@@ -7,6 +7,7 @@ public class Client<T> {
 
     private T clientName;
 
+
     public  Client(T clientName){
         this.clientName=clientName;
     }

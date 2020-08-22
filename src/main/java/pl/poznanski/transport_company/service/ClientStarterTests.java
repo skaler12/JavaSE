@@ -27,6 +27,9 @@ public class ClientStarterTests {
         MaleClient<MaleClient,Integer>maleClient1 = new MaleClient<>(new MaleClient());
         System.out.println(maleClient1.get(12));
 
+        FamelClient<FamelClient>famelClient1 = new FamelClient<>(new FamelClient());
+        System.out.println(famelClient1.get(famelClient1));
+
     }
 }
 

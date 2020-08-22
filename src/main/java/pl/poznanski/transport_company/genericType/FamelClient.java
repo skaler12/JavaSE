@@ -14,4 +14,7 @@ public class FamelClient<T> {
     public T getAge() {
         return age;
     }
+    public String get(FamelClient<?>something){
+        return something.toString();
+    }
 }
