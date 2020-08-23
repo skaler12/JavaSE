@@ -1,9 +1,6 @@
 package pl.poznanski.transport_company.lambda;
 
-import java.util.function.BiFunction;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 //Utwórz instancję klasy Human przy pomocy mechanizmu odwoływania się do konstruktora (przy pomocy ::)
 public class ThirdExercise {
@@ -28,8 +25,10 @@ public class ThirdExercise {
         System.out.println(odp.apply(4,3));
         //Wykorzystując referencję do konstruktora utwórz obiekt klasy Boolean.
         // Parametrem wejściowym metody jest łańcuch znaków zawierający wartość true lub false
+        Function<String,Boolean>booleanSupplier = Boolean::new;
+        Predicate<Boolean>predicate = aBoolean -> {if(aBoolean.equals(true)) return true; else return false;};
+        System.out.println(predicate.test(true));
 
-        
 
     }
 }
