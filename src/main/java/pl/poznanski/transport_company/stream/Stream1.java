@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -70,5 +71,14 @@ public class Stream1 {
                 .filter(employee -> employee.getDayJob().equals(Employee.DayJob.FULL_TIME))
                 .mapToDouble(n->n.getSalary()).sum();
         System.out.println(salar);
+
+
+
+
+
+
+
+
+
     }
 }
